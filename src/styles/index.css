@@ -23,6 +23,10 @@ body {
   margin: 0;
   min-width: 320px;
   font-family: "Cormorant Garamond", serif;
+  background:
+    radial-gradient(circle at 14% 7%, rgba(221, 238, 238, 0.78), transparent 32rem),
+    radial-gradient(circle at 88% 16%, rgba(216, 195, 165, 0.28), transparent 24rem),
+    linear-gradient(180deg, #fffdf9 0%, #faf8f4 46%, #f6f2eb 100%);
 }
 
 img {
@@ -32,4 +36,85 @@ img {
 ::selection {
   background: #c9e2e1;
   color: #1f3433;
+}
+
+.invitation-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.invitation-shell::before,
+.invitation-shell::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.invitation-shell::before {
+  background-image:
+    linear-gradient(rgba(93, 156, 154, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(93, 156, 154, 0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent 72%);
+}
+
+.invitation-shell::after {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(93, 156, 154, 0.13), transparent 30rem),
+    linear-gradient(115deg, transparent 0%, rgba(255, 253, 249, 0.54) 48%, transparent 100%);
+  z-index: -1;
+}
+
+.premium-heading {
+  text-shadow: 0 2px 12px rgba(93, 156, 154, 0.25);
+}
+
+.soft-frame {
+  box-shadow:
+    0 20px 60px rgba(93, 156, 154, 0.15),
+    0 10px 30px rgba(31, 52, 51, 0.08);
+}
+
+.glass-panel {
+  background: rgba(255, 253, 249, 0.74);
+  backdrop-filter: blur(14px);
+}
+
+.elegant-divider {
+  background:
+    linear-gradient(90deg, transparent, rgba(216, 195, 165, 0.9), transparent),
+    linear-gradient(90deg, transparent, rgba(93, 156, 154, 0.32), transparent);
+}
+
+.ornament-float {
+  animation: ornament-float 8s ease-in-out infinite alternate;
+}
+
+@keyframes ornament-float {
+  from {
+    opacity: 0.58;
+    filter: drop-shadow(0 0 0 rgba(93, 156, 154, 0));
+  }
+
+  to {
+    opacity: 0.82;
+    filter: drop-shadow(0 12px 18px rgba(93, 156, 154, 0.08));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
 }

@@ -13,7 +13,7 @@ export function Container({
   as: Component = "section",
 }: ContainerProps) {
   return (
-    <Component id={id} className={`mx-auto w-full max-w-6xl px-5 sm:px-8 ${className}`}>
+    <Component id={id} className={`mx-auto w-full max-w-5xl px-5 sm:px-7 ${className}`}>
       {children}
     </Component>
   );

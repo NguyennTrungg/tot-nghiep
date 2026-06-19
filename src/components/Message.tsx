@@ -1,26 +1,32 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Container } from "./Container";
+import { FloralOrnament } from "./FloralOrnament";
+import { fadeUp, luxuryTransition, viewportOnce } from "../utils/motion";
 
 type MessageProps = {
   message: string;
 };
 
 export function Message({ message }: MessageProps) {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <Container className="py-16 sm:py-20">
+    <Container className="relative py-6 sm:py-10">
+      <FloralOrnament className="ornament-float pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 text-teal-700/5" />
       <motion.section
-        initial={{ opacity: 0, y: 22 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.35 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="mx-auto max-w-3xl text-center"
+        initial={reduceMotion ? false : "hidden"}
+        whileInView="visible"
+        viewport={viewportOnce}
+        variants={fadeUp}
+        transition={luxuryTransition}
+        className="glass-panel relative mx-auto max-w-3xl rounded-2xl border border-teal-50 px-6 py-9 text-center shadow-card sm:px-12 sm:py-10"
         aria-label="Lời nhắn"
       >
-        <div className="mx-auto mb-8 h-px w-28 bg-gradient-to-r from-transparent via-teal-500 to-transparent" />
-        <blockquote className="text-3xl font-medium leading-tight text-teal-900 sm:text-5xl">
+        <div className="elegant-divider mx-auto mb-6 h-px w-28" />
+        <blockquote className="premium-heading text-3xl font-medium leading-tight text-teal-900 sm:text-5xl">
           “{message}”
         </blockquote>
-        <div className="mx-auto mt-8 h-px w-28 bg-gradient-to-r from-transparent via-champagne to-transparent" />
+        <div className="elegant-divider mx-auto mt-6 h-px w-28" />
       </motion.section>
     </Container>
   );

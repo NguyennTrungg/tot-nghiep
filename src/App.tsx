@@ -1,4 +1,5 @@
 import { invitation } from "./config/invitation";
+import { BackgroundMusic } from "./components/BackgroundMusic";
 import { EventInfo } from "./components/EventInfo";
 import { Footer } from "./components/Footer";
 import { Gallery } from "./components/Gallery";
@@ -8,7 +9,12 @@ import { Message } from "./components/Message";
 
 export default function App() {
   return (
-    <main className="min-h-screen overflow-hidden bg-ivory text-ink">
+    <main className="invitation-shell relative min-h-screen overflow-hidden bg-ivory text-ink">
+      <BackgroundMusic
+        src={invitation.music.src}
+        playLabel={invitation.music.playLabel}
+        pauseLabel={invitation.music.pauseLabel}
+      />
       <Hero invitation={invitation} />
       <EventInfo invitation={invitation} />
       <Gallery

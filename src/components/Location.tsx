@@ -26,6 +26,7 @@ export function Location({ invitation }: LocationProps) {
       >
         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-teal-50 text-teal-700">
           <MapPinned aria-hidden="true" className="h-6 w-6" />
+          <p>Phone: 0357005810</p>
         </div>
         <div>
           <h3 id="location-heading" className="text-2xl font-semibold text-teal-900">

@@ -6,7 +6,7 @@ export const invitation = {
     "Trân trọng kính mời bạn đến chung vui trong khoảnh khắc đánh dấu hành trình trưởng thành của Như Ngọc.",
   ctaLabel: "Xem thông tin buổi lễ",
   date: "Thứ 7, 27/06/2026",
-  time: "16:30",
+  time: "15:30",
   university: "Trường Đại học Giao thông vận tải TPHCM",
   address: "Số 02, Võ Oanh, Phường 25, Quận Bình Thạnh, TP.HCM",
   mapsUrl: "https://maps.app.goo.gl/uoVSTRz95GDHLybW9",
@@ -16,7 +16,7 @@ export const invitation = {
   sections: {
     event: "Thông tin buổi lễ",
     gallery: "Khoảnh khắc đáng nhớ",
-    location: "Địa điểm tổ chức",
+    location: "Check map nha!",
   },
   eventCards: {
     date: "Ngày",

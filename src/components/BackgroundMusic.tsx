@@ -8,7 +8,7 @@ type BackgroundMusicProps = {
   pauseLabel: string;
 };
 
-const DEFAULT_VOLUME = 0.025;
+const DEFAULT_VOLUME = 0.05;
 
 export function BackgroundMusic({ src, playLabel, pauseLabel }: BackgroundMusicProps) {
   const audioRef = useRef<HTMLAudioElement>(null);

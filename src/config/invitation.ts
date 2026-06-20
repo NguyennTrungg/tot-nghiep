@@ -28,11 +28,12 @@ export const invitation = {
     playLabel: "Bật nhạc nền",
     pauseLabel: "Tắt nhạc nền",
   },
+  heroImage: "/images/photo-1.jpg",
   photos: [
-    "/images/photo-1.jpg",
     "/images/photo-2.jpg",
     "/images/photo-3.jpg",
     "/images/photo-4.jpg",
+    "/images/photo-5.jpg",
   ],
 };
 

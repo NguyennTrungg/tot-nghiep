@@ -10,7 +10,7 @@ type HeroProps = {
 };
 
 export function Hero({ invitation }: HeroProps) {
-  const heroImage = invitation.photos[0];
+  const heroImage = invitation.heroImage;
   const reduceMotion = useReducedMotion();
 
   return (

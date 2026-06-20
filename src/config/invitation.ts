@@ -1,9 +1,8 @@
 export const invitation = {
-  eyebrow: "THIỆP MỜI",
   graduateName: "Nguyễn Như Ngọc",
   title: "Lễ Tốt Nghiệp",
   invitationMessage:
-    "Trân trọng kính mời bạn đến chung vui trong khoảnh khắc đánh dấu hành trình trưởng thành của Như Ngọc.",
+    'Cái được gọi là:" Một đêm thành danh" \n Thực chất là: " Nghìn đêm nỗ lực"',
   ctaLabel: "Xem thông tin buổi lễ",
   date: "Thứ 7, 27/06/2026",
   time: "15:30",
@@ -11,11 +10,11 @@ export const invitation = {
   address: "Số 02, Võ Oanh, Phường 25, Quận Bình Thạnh, TP.HCM",
   mapsUrl: "https://maps.app.goo.gl/uoVSTRz95GDHLybW9",
   personalMessage:
-    "Sự hiện diện của bạn là niềm vinh hạnh và nguồn động viên lớn dành cho tôi.",
+    "Tốt nghiệp vừa là sự kết thúc của niềm vui trong quá khứ, vừa là khởi đầu hạnh phúc trong tương lai. Nếu niềm hạnh phúc có hình dạng, chắc chắn sẽ là ánh nắng và tiếng cười ngày hôm ấy.",
   thankYouMessage: "Cảm ơn vì đã là một phần thật đẹp trong hành trình này.",
   sections: {
     event: "Thông tin buổi lễ",
-    gallery: "Khoảnh khắc đáng nhớ",
+    gallery: "Tôi mong rằng, ngày hôm đó tôi và bạn sẽ có chung trong một khung hình.",
     location: "Check map nha!",
   },
   eventCards: {

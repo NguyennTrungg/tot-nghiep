@@ -12,14 +12,14 @@ export function Message({ message }: MessageProps) {
 
   return (
     <Container className="relative py-6 sm:py-10">
-      <FloralOrnament className="ornament-float pointer-events-none absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 text-teal-700/5" />
+      <FloralOrnament className="ornament-float pointer-events-none absolute h-72 w-72 -translate-x-1/2 -translate-y-1/2 text-teal-700/5" />
       <motion.section
         initial={reduceMotion ? false : "hidden"}
         whileInView="visible"
         viewport={viewportOnce}
         variants={fadeUp}
         transition={luxuryTransition}
-        className="glass-panel relative mx-auto max-w-3xl rounded-2xl border border-teal-50 px-6 py-9 text-center shadow-card sm:px-12 sm:py-10"
+        className="glass-panel relative mx-auto max-w-5xl rounded-2xl border border-teal-50 px-6 py-9 text-center shadow-card sm:px-12 sm:py-10"
         aria-label="Lời nhắn"
       >
         <div className="elegant-divider mx-auto mb-6 h-px w-28" />

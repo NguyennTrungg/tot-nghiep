@@ -18,18 +18,6 @@ export function Hero({ invitation }: HeroProps) {
       as="section"
       className="relative grid min-h-[86vh] items-center gap-8 pb-8 pt-6 sm:min-h-[88vh] sm:pb-12 lg:grid-cols-[0.96fr_1.04fr] lg:gap-12"
     >
-      <motion.div
-        initial={reduceMotion ? false : { opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="pointer-events-none absolute left-0 top-6 hidden h-24 w-24 rounded-tl-[42px] border-l border-t border-teal-500/20 sm:block"
-      />
-      <motion.div
-        initial={reduceMotion ? false : { opacity: 0, scale: 0.98 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-        className="pointer-events-none absolute bottom-12 right-0 hidden h-24 w-24 rounded-br-[42px] border-b border-r border-teal-500/20 sm:block"
-      />
       <FloralOrnament className="ornament-float pointer-events-none absolute -right-20 top-12 h-48 w-48 text-teal-700/10 sm:h-64 sm:w-64" />
       <FloralOrnament className="ornament-float pointer-events-none absolute -bottom-8 -left-20 h-48 w-48 -scale-x-100 rotate-12 text-teal-700/10 sm:h-60 sm:w-60" />
 
@@ -59,9 +47,6 @@ export function Hero({ invitation }: HeroProps) {
         transition={{ ...luxuryTransition, delay: 0.15 }}
         className="relative mx-auto max-w-xl text-center lg:text-left"
       >
-        <p className="text-xs font-semibold uppercase tracking-[0.42em] text-teal-700">
-          {invitation.eyebrow}
-        </p>
         <h1 className="premium-heading mt-3 text-5xl font-semibold leading-[0.96] tracking-wide text-teal-900 sm:text-7xl">
           {invitation.title}
         </h1>
@@ -69,7 +54,7 @@ export function Hero({ invitation }: HeroProps) {
           {invitation.graduateName}
         </p>
         <div className="elegant-divider mx-auto mt-5 h-px w-36 lg:mx-0" />
-        <p className="mx-auto mt-5 max-w-lg text-xl leading-8 text-ink/80 lg:mx-0">
+        <p className="mx-auto mt-5 max-w-lg whitespace-pre-line text-xl leading-8 text-ink/80 lg:mx-0">
           {invitation.invitationMessage}
         </p>
         <motion.a
